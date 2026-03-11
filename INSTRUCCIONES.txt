@@ -36,4 +36,8 @@ Administrador:
    Email:      admin@f1.com
    Contraseña: password
 
+Usuario:  Te registras como quieras y ya
+  
+   
+
 ============================================================
