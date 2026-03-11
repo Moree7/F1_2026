@@ -1,0 +1,358 @@
+/* ============================================================
+   F1 2026 Manager - Estilos principales
+   ============================================================ */
+
+:root {
+    --rojo:    #e8002d;
+    --rojo-d:  #c0001f;
+    --bg:      #111318;
+    --card:    #1a1d24;
+    --card2:   #21242d;
+    --borde:   #2e3240;
+    --texto:   #e8eaf0;
+    --muted:   #9399a8;
+}
+
+/* ---------- Base ---------- */
+body {
+    background: var(--bg);
+    color: var(--texto);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+a { color: var(--rojo); text-decoration: none; }
+a:hover { color: #ff3355; }
+h1,h2,h3,h4,h5,h6 { color: var(--texto); }
+
+/* Forzar texto claro en TODO Bootstrap */
+.text-muted { color: var(--muted) !important; }
+.small, small { color: var(--texto) !important; }
+
+/* ---------- Navbar ---------- */
+.f1-navbar {
+    background: #0d0d0d !important;
+    border-bottom: 2px solid var(--rojo) !important;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.5) !important;
+    padding: 0 !important;
+}
+.f1-navbar .container-fluid { padding: 0 1.5rem; min-height: 54px; }
+.f1-navbar .navbar-brand { color: #fff !important; font-weight: 700; font-size: 1.15rem; }
+.f1-navbar .nav-link {
+    color: var(--muted) !important;
+    font-size: 0.88rem; font-weight: 600;
+    padding: 0.9rem 0.85rem !important;
+    transition: color 0.15s;
+}
+.f1-navbar .nav-link:hover { color: #fff !important; }
+.f1-navbar .dropdown-toggle { color: var(--muted) !important; font-weight: 600; font-size: 0.88rem; }
+.f1-navbar .dropdown-toggle:hover { color: #fff !important; }
+
+.dropdown-dark-f1 {
+    background: var(--card2) !important;
+    border: 1px solid var(--borde) !important;
+    border-radius: 8px !important;
+    padding: 0.35rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+}
+.dropdown-dark-f1 .dropdown-item { color: var(--texto) !important; border-radius: 5px; font-size: 0.88rem; padding: 0.45rem 0.75rem; }
+.dropdown-dark-f1 .dropdown-item:hover { background: var(--borde) !important; }
+.dropdown-dark-f1 .dropdown-divider { border-color: var(--borde); }
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--card) !important;
+    border: 1px solid var(--borde) !important;
+    border-radius: 10px !important;
+    color: var(--texto) !important;
+}
+.card-body { color: var(--texto) !important; }
+.card-header {
+    background: var(--card2) !important;
+    border-bottom: 1px solid var(--borde) !important;
+    color: var(--texto) !important;
+    font-weight: 600; font-size: 0.92rem; padding: 0.85rem 1.25rem;
+}
+.card-footer {
+    background: var(--card2) !important;
+    border-top: 1px solid var(--borde) !important;
+    color: var(--texto) !important;
+}
+
+/* ---------- Tablas ---------- */
+.table {
+    color: var(--texto) !important;
+    border-color: var(--borde) !important;
+}
+.table td, .table th { color: var(--texto) !important; }
+
+.table-dark-f1 {
+    --bs-table-bg: var(--card);
+    --bs-table-striped-bg: var(--card2);
+    --bs-table-hover-bg: #272b36;
+    --bs-table-border-color: var(--borde);
+    --bs-table-color: var(--texto);
+    color: var(--texto) !important;
+}
+.table-dark-f1 td, .table-dark-f1 th { color: var(--texto) !important; }
+
+.table-dark-f1 thead th {
+    background: var(--card2) !important;
+    color: var(--muted) !important;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    border-bottom: 2px solid var(--rojo) !important;
+    border-color: var(--borde) !important;
+    padding: 0.7rem 1rem;
+}
+.table-dark-f1 tbody td {
+    border-color: var(--borde) !important;
+    padding: 0.65rem 1rem;
+    vertical-align: middle;
+}
+.table-dark-f1 tbody tr:hover { background: #272b36 !important; }
+
+/* ---------- Formularios ---------- */
+.form-control, .form-select {
+    background: var(--card2) !important;
+    border: 1px solid var(--borde) !important;
+    color: var(--texto) !important;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    padding: 0.55rem 0.85rem;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--rojo) !important;
+    box-shadow: 0 0 0 3px rgba(232,0,45,0.15) !important;
+    background: var(--card2) !important;
+    color: var(--texto) !important;
+}
+.form-control::placeholder { color: #555b6e; }
+.form-label { color: var(--muted); font-size: 0.82rem; font-weight: 600; margin-bottom: 0.3rem; }
+.form-check-input { background-color: var(--card2) !important; border-color: var(--borde) !important; }
+.form-check-input:checked { background-color: var(--rojo) !important; border-color: var(--rojo) !important; }
+.form-check-label { color: var(--texto) !important; }
+.form-control.is-invalid, .form-select.is-invalid { border-color: #ff4455 !important; }
+.invalid-feedback { color: #ff7788; font-size: 0.8rem; }
+.input-group-text { background: var(--card2) !important; border-color: var(--borde) !important; color: var(--muted) !important; }
+
+/* ---------- Botones ---------- */
+.btn-f1 {
+    background: var(--rojo); border: none; color: #fff;
+    font-weight: 600; font-size: 0.9rem; border-radius: 7px;
+    padding: 0.55rem 1.25rem; transition: background 0.15s, transform 0.1s;
+}
+.btn-f1:hover { background: var(--rojo-d); color: #fff; transform: translateY(-1px); }
+
+/* ---------- List group ---------- */
+.list-group-item {
+    background: transparent !important;
+    border-color: var(--borde) !important;
+    color: var(--texto) !important;
+}
+.list-group-item .fw-semibold { color: var(--texto) !important; }
+
+/* ---------- Alerts ---------- */
+.alert-success { background: rgba(40,180,90,.12) !important; border-color: rgba(40,180,90,.3) !important; color: #7de0a0 !important; }
+.alert-danger  { background: rgba(232,0,45,.12)  !important; border-color: rgba(232,0,45,.3)  !important; color: #ff8899 !important; }
+
+/* ---------- Badges ---------- */
+.badge-posicion-1 { background: #b8860b !important; color: #fff !important; }
+.badge-posicion-2 { background: #5a6a7a !important; color: #fff !important; }
+.badge-posicion-3 { background: #7a4520 !important; color: #fff !important; }
+
+/* ---------- Stat Cards ---------- */
+.stat-card {
+    background: var(--card) !important;
+    border: 1px solid var(--borde) !important;
+    border-radius: 10px !important;
+    color: var(--texto) !important;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important; }
+.stat-card .stat-number { font-size: 2.5rem; font-weight: 800; color: #fff; line-height: 1; }
+.stat-card .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+
+/* ---------- ESCUDERÍAS cards mejoradas ---------- */
+.esc-card {
+    background: var(--card);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.15s, border-color 0.15s;
+    color: var(--texto);
+}
+.esc-card:hover { transform: translateY(-3px); border-color: #3e4255; }
+.esc-card .esc-header {
+    padding: 1.1rem 1.25rem 0.6rem;
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+.esc-card .esc-nombre { font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; }
+.esc-card .esc-body { padding: 0 1.25rem 1rem; }
+.esc-card .esc-row {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.87rem; color: var(--texto);
+    padding: 0.22rem 0;
+}
+.esc-card .esc-row i { color: var(--muted); width: 14px; text-align: center; }
+.esc-card .esc-footer {
+    padding: 0.65rem 1.25rem;
+    background: var(--card2);
+    border-top: 1px solid var(--borde);
+    display: flex; gap: 0.5rem;
+}
+.badge-activa   { background: rgba(40,180,90,.18); color: #6ee09a; border: 1px solid rgba(40,180,90,.3); font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 20px; font-weight: 600; }
+.badge-inactiva { background: rgba(100,100,120,.2); color: var(--muted); border: 1px solid var(--borde); font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 20px; font-weight: 600; }
+
+/* ---------- NEUMÁTICOS cards ---------- */
+.neu-card {
+    background: var(--card);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--texto);
+    transition: transform 0.15s;
+}
+.neu-card:hover { transform: translateY(-3px); }
+.neu-card .neu-top {
+    padding: 1.2rem 1.25rem;
+    display: flex; align-items: center; gap: 1rem;
+}
+.neu-circulo {
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; font-weight: 900; flex-shrink: 0;
+    color: #fff;
+}
+.neu-card .neu-nombre { font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; }
+.neu-card .neu-cond { font-size: 0.82rem; color: var(--muted); margin-top: 0.1rem; }
+.neu-card .neu-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    border-top: 1px solid var(--borde);
+}
+.neu-stat { padding: 0.7rem 0.5rem; }
+.neu-stat:not(:last-child) { border-right: 1px solid var(--borde); }
+.neu-stat .ns-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.neu-stat .ns-val { font-size: 0.88rem; font-weight: 700; color: var(--texto); }
+.neu-card .neu-footer {
+    padding: 0.65rem 1.25rem;
+    background: var(--card2);
+    border-top: 1px solid var(--borde);
+    display: flex; gap: 0.5rem;
+}
+
+/* Colores neumáticos por tipo */
+.neu-duro       { background: #f0f0f0; color: #111; }
+.neu-medio      { background: #f5c800; color: #111; }
+.neu-blando     { background: #e8002d; color: #fff; }
+.neu-intermedio { background: #2fa84f; color: #fff; }
+.neu-lluvia     { background: #1565c0; color: #fff; }
+
+/* ---------- Weather ---------- */
+.weather-card {
+    background: var(--card2);
+    border: 1px solid var(--borde) !important;
+    border-left: 3px solid var(--rojo) !important;
+    border-radius: 8px !important;
+    color: var(--texto) !important;
+}
+
+/* ---------- Footer ---------- */
+.f1-footer {
+    background: var(--card) !important;
+    border-top: 1px solid var(--borde);
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* ---------- Modal ---------- */
+.modal-content {
+    background: var(--card) !important;
+    border: 1px solid var(--borde) !important;
+    border-radius: 12px !important;
+    color: var(--texto) !important;
+}
+.modal-header { border-bottom: 1px solid var(--borde) !important; padding: 1.1rem 1.4rem; }
+.modal-footer { border-top: 1px solid var(--borde) !important; }
+.modal-title { color: var(--texto) !important; }
+
+/* ---------- AUTH ---------- */
+.auth-wrapper { min-height: 100vh; display: flex; align-items: stretch; background: #0d0d0d; }
+.auth-left {
+    flex: 0 0 42%;
+    background: linear-gradient(160deg, #0d0d0d 0%, #1a0007 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem; border-right: 1px solid var(--borde); position: relative; overflow: hidden;
+}
+.auth-left::before {
+    content: ''; position: absolute; width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(232,0,45,.15) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+}
+.auth-left::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--rojo), transparent);
+}
+.auth-logo-big { font-size: 4.5rem; font-weight: 900; color: #fff; text-align: center; line-height: 1; margin-bottom: 0.6rem; position: relative; z-index: 1; }
+.auth-logo-big span { color: var(--rojo); }
+.auth-tagline { color: var(--muted); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; position: relative; z-index: 1; }
+.auth-deco { position: absolute; font-size: 16rem; font-weight: 900; color: rgba(232,0,45,.04); bottom: -3rem; right: -2rem; line-height: 1; pointer-events: none; user-select: none; }
+.auth-right { flex: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 2.5rem; background: var(--bg); }
+.auth-box { width: 100%; max-width: 370px; }
+.auth-title { font-size: 1.75rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
+.auth-subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.75rem; }
+.auth-right .form-control { padding: 0.65rem 1rem !important; font-size: 0.95rem !important; }
+.auth-alert { background: rgba(232,0,45,.1); border: 1px solid rgba(232,0,45,.3); border-radius: 7px; color: #ff8899; padding: 0.6rem 0.9rem; font-size: 0.88rem; margin-bottom: 1.25rem; }
+.auth-alert-success { background: rgba(40,180,90,.1); border: 1px solid rgba(40,180,90,.3); color: #70dd99; }
+.auth-divider { border-color: var(--borde) !important; margin: 1.25rem 0; }
+.auth-footer-text { color: var(--muted); font-size: 0.88rem; text-align: center; }
+.auth-footer-text a { color: #fff; font-weight: 600; }
+.btn-f1-block { width: 100%; padding: 0.7rem; font-size: 0.95rem; }
+
+/* ---------- Misc ---------- */
+.pista-seco   { color: #e8c84a !important; }
+.pista-mojado { color: #5bc8f5 !important; }
+.pista-mixto  { color: #82c9a0 !important; }
+.pista-desc   { color: var(--muted) !important; }
+code { color: #ff8899; background: rgba(232,0,45,.08); padding: .15em .4em; border-radius: 4px; font-size: .85em; }
+
+@media (max-width: 768px) {
+    .auth-wrapper { flex-direction: column; }
+    .auth-left { flex: 0 0 160px; border-right: none; border-bottom: 1px solid var(--borde); padding: 1.5rem; }
+    .auth-logo-big { font-size: 2.5rem; }
+    .auth-deco { font-size: 7rem; }
+    .stat-card .stat-number { font-size: 1.9rem; }
+    .table-responsive { font-size: 0.82rem; }
+}
+
+/* ---------- Nav Tabs ---------- */
+.nav-tabs {
+    border-bottom: 2px solid var(--borde) !important;
+}
+.nav-tabs .nav-link {
+    color: var(--muted) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    border-radius: 6px 6px 0 0 !important;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 0.55rem 1.1rem;
+    transition: color 0.15s;
+}
+.nav-tabs .nav-link:hover {
+    color: var(--texto) !important;
+    border-color: var(--borde) !important;
+}
+.nav-tabs .nav-link.active {
+    color: var(--texto) !important;
+    background: var(--card) !important;
+    border-color: var(--borde) var(--borde) var(--card) !important;
+}
+.nav-tabs .nav-link .badge {
+    font-size: 0.7rem;
+}

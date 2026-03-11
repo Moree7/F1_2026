@@ -1,0 +1,40 @@
+============================================================
+  F1 2026 - Instrucciones de instalación
+============================================================
+
+IMPORTANTE - NOMBRE DE LA CARPETA
+----------------------------------
+La carpeta del proyecto debe llamarse exactamente:
+
+    F1_2026
+
+Si la descargaste desde GitHub el ZIP se llama F1_2026-main,
+renombra la carpeta a F1_2026 antes de continuar.
+
+Ruta correcta en XAMPP:
+    C:\xampp\htdocs\F1_2026\
+
+
+PASOS DE INSTALACIÓN
+--------------------
+1. Copia la carpeta F1_2026 dentro de C:\xampp\htdocs\
+
+2. Abre phpMyAdmin: http://localhost/phpmyadmin
+
+3. Crea una base de datos nueva:
+   - Nombre: f1_2026
+   - Cotejamiento: utf8mb4_general_ci
+
+4. Importa el archivo f1_2026.sql que está dentro del proyecto
+
+5. Abre el navegador y accede a:
+   http://localhost/F1_2026/
+
+
+CREDENCIALES DE ACCESO
+----------------------
+Administrador:
+   Email:      admin@f1.com
+   Contraseña: password
+
+============================================================
