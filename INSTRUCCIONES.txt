@@ -23,7 +23,6 @@ PASOS DE INSTALACIÓN
 
 3. Crea una base de datos nueva:
    - Nombre: f1_2026
-   - Cotejamiento: utf8mb4_general_ci
 
 4. Importa el archivo f1_2026.sql que está dentro del proyecto
 
