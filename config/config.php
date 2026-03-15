@@ -1,0 +1,15 @@
+<?php
+// Constantes globales que uso en toda la aplicación
+// BASE_URL se calcula automáticamente para que funcione
+// con cualquier nombre de carpeta en htdocs
+
+define('APP_NAME', 'F1 2026 Manager');
+
+// Deberia detectar automáticamente el nombre de la carpeta del proyecto
+$scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
+$carpeta   = explode('/', trim($scriptDir, '/'))[0];
+define('BASE_URL', '/' . $carpeta . '/');
+
+// API gratuita de Open-Meteo para el clima de los circuitos - NO tiene KEY
+define('WEATHER_API', 'https://api.open-meteo.com/v1/forecast');
+?>
